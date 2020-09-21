@@ -1,7 +1,7 @@
 resource "azurerm_storage_account" "demoSA" {
   name                     = var.storacc_name
   resource_group_name      = var.rg_name
-  location                 = var.rg_loc
+  location                 = var.rg_location
   account_tier             = var.acc_tier
   account_replication_type = var.replication_type
 }
@@ -16,7 +16,7 @@ resource "azurerm_storage_container" "demoSC" {
 resource "azurerm_hdinsight_hadoop_cluster" "demohadoop" {
   name                = var.hadoopclus_name
   resource_group_name = var.rg_name
-  location            = var.rg_loc
+  location            = var.rg_location
   cluster_version     = var.clus_version
   tier                = var.clus_tier
 
