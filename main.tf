@@ -7,7 +7,7 @@ provider "azurerm" {
 module "aks" {
   source              = "./aks"
   rg_name             = "demorg2"
-  rg_location         = "Central US"
+  rg_location         = "centralus"
   Vnet_name           = "aksvnet001"
   Vnet_addr           = ["10.0.0.0/16"]
   subnet_name         = "akssubnet001"
