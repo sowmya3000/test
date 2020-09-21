@@ -27,8 +27,8 @@ module "aks" {
 module "hdinsight"{
   source              = "./hdinsight"
   storacc_name        = "hdstoracc2201"
-  rg_name             = "demorg2"
-  rg_loc              = "Central US"
+  rg_name             = "module.aks.rg_name"
+  rg_loc              = "module.aks.rg_location"
   acc_tier            = "Standard"
   replication_type    = "LRS"
   storcont_name       = "hdcontainer"
