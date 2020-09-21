@@ -6,7 +6,7 @@ variable "rg_name"{
     type = string
 }
 
-variable "rg_loc"{
+variable "rg_location"{
     type = string
 }
 
