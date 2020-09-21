@@ -7,7 +7,7 @@ provider "azurerm" {
 module "aks" {
   source              = "./aks"
   rg_name             = "demorg2"
-  rg_location         = "centralus"
+  rg_location         = "Central US"
   Vnet_name           = "aksvnet001"
   Vnet_addr           = ["10.0.0.0/16"]
   subnet_name         = "akssubnet001"
@@ -27,8 +27,8 @@ module "aks" {
 module "hdinsight"{
   source              = "./hdinsight"
   storacc_name        = "hdstoracc2201"
-  rg_name             = "module.aks.rg_name"
-  rg_loc              = "module.aks.rg_location"
+  rg_name             = module.aks.rg_name
+  rg_location         = module.aks.rg_location
   acc_tier            = "Standard"
   replication_type    = "LRS"
   storcont_name       = "hdcontainer"
